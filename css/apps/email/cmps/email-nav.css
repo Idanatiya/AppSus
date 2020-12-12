@@ -1,0 +1,107 @@
+.email-nav {
+    background-color: white;
+    font-size: 1.25rem;
+    flex: 1;
+    color: rgb(100, 100, 100);
+}
+
+.email-nav-list {
+    flex: 1;
+}
+
+.new-email-open-btn {
+    position: fixed;
+    display: flex;
+    background-color: white;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+    border: 1px outset #1C6EA4;
+    padding: 0.75rem;
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 10;
+}
+
+.email-nav ul {
+    margin: 0;
+}
+
+.email-nav li {
+    position: relative;
+    padding: 1rem;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.span-for-read {
+    position: absolute;
+    right: 2rem;
+}
+
+.email-nav li.focused {
+    background-color: #c86b6b15;
+    color: #c86b6b;
+}
+
+@media (min-width:640px) {
+    .email-nav {
+        flex: unset;
+    }
+    .new-email-open-btn {
+        background-color: #1C6EA408;
+        position: static;
+        align-items: center;
+        margin: 1rem 2rem 1rem 2rem;
+        border-radius: 3rem;
+        transition: all .33s;
+    }
+    .new-email-open-btn:hover {
+        background-color: #fff;
+        box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    }
+    .email-nav-list {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .email-nav li {
+        border-radius: 0 2rem 2rem 0;
+        padding: 1rem 2rem;
+    }
+    .email-nav li:hover {
+        background-color: #1C6EA408;
+        color: #1C6EA4;
+    }
+    .new-email-open-btn::after {
+        content: "Compose";
+        font-size: 1.25rem;
+        padding: 0 1rem;
+    }
+    .inbox-navigator::after {
+        content: "Inbox";
+    }
+    .starred-navigator::after {
+        content: "Starred";
+    }
+    .sent-navigator::after {
+        content: "Sent";
+    }
+    .drafts-navigator::after {
+        content: "Drafts";
+    }
+    .trash-navigator::after {
+        content: "Trash";
+    }
+    .inbox-navigator::after,
+    .starred-navigator::after,
+    .sent-navigator::after,
+    .drafts-navigator::after,
+    .trash-navigator::after {
+        font-size: 1rem;
+        padding: 0 1rem;
+        font-family: roboto, Arial, Helvetica, sans-serif;
+    }
+    .span-for-read {
+        display: inline;
+        right: 2rem;
+    }
+}

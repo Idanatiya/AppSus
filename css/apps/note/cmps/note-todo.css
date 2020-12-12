@@ -1,0 +1,44 @@
+/* todo container */
+
+.note-todos-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* todo item */
+
+.todo-item-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+    font-size: 16px;
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+    margin-inline-end: 10px;
+}
+
+.todo-item-container .delete-todo {
+    font-size: 25px;
+    color: crimson;
+    transition: .3s ease;
+}
+
+.todo-item-container .delete-todo:hover {
+    transform: scale(1.2);
+}
+
+
+/* todo mark */
+
+.marked {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.todo-list-name {
+    font-size: 25px;
+    margin: 10px auto;
+}

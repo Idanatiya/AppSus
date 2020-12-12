@@ -1,0 +1,10 @@
+.email-app {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width:640px) {
+    .main-email-content {
+        flex-direction: row;
+    }
+}
